@@ -64,14 +64,14 @@
 
 														
 														<li class="menu-item" >
-														<form method="POST" action="{{ route('logout') }}">
-														@csrf
-														<a href="{{ route('logout') }}"
-																onclick="event.preventDefault();
-																		this.closest('form').submit();">
-															{{ __('Log Out') }}
-														</a>
-													</form>
+															<form method="POST" action="{{ route('logout') }}">
+																@csrf
+																<a href="{{ route('logout') }}"
+																		onclick="event.preventDefault();
+																				this.closest('form').submit();">
+																	{{ __('Log Out') }}
+																</a>
+															</form>
 														</li>
 													</ul>
 												</li>
@@ -83,8 +83,20 @@
 														<li class="menu-item" >
 															<a title="Dashboard" href="{{ route('user.dashboard')}}">Dashboard</a>
 														</li>
+														<li class="menu-item" >
+															<form method="POST" action="{{ route('logout') }}">
+																@csrf
+																<a href="{{ route('logout') }}"
+																		onclick="event.preventDefault();
+																				this.closest('form').submit();">
+																	{{ __('Log Out') }}
+																</a>
+															</form>
+														</li>
+
 													</ul>
 												</li>
+												
 											@endif
 
 										@else										
